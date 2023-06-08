@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto';
+    // margin: 50% 0 0 0;
+    // position: absolute;
+    background-image: url("src/assets/img/vecteezy_black-sky-with-stars-space-background__142.jpg");
+}
+
+#background::after {
+    content:'';
+    top: 0;
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(180deg, rgba(20,20,20,1) 40%, rgba(20,20,20,0) 100%);
+
+}
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    perspective: 450px;
+    z-index: -1;
+}
+
+.scroll-text {
+    color: #ffc909;
+    font-size: 3vw;
+    height: auto;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+    animation: scroll 80s linear forwards;
+    transform: rotateX(20deg);
+    z-index: -1;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 60px;
+}
+
+@keyframes scroll {
+    from { top: 0; transform: translateZ(0) rotateX(20deg); }
+    to { top : -7500px; transform: translateZ(-2500px) rotateX(21deg) ; }
+}
+
+// @keyframes movingtop {
+//     from {top: 30vh ; transform: translateZ(-2500px); height: 70vh; width: auto;}
+//     to {top :0 ; transform: translateZ(-2500px)}
+// }
+
+
+.divButton {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    height: auto;
+    width: auto;
+    
+}
+
+button  {
+    background-color: #F084E4;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 100px;
+   display: flex;
+   justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    transform: none;
+    perspective: none;
+    border-radius: 100%;
+  }
+
+  #logo {
+    background: linear-gradient(0deg, rgba(228, 174, 56, 0) 0%, rgb(0, 0, 0) 55%);
+    display: flex;
+    justify-content: center;
+    z-index: 9;
+    height: 45vh;
+    position: relative;
+    
+}
+
+img {
+    height: 30vh;
+    width: auto;
+    
+}
