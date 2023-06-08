@@ -1,8 +1,9 @@
 import {useState} from "react";
+import Filters from "./Filters";
 
 const Cards = (props) => {
 
-  const { peoples, handlePrevious, handleNext } = props;
+  const { peoples, handlePrevious, handleNext, characters, setFilteredCharacters} = props;
 
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -14,6 +15,7 @@ const Cards = (props) => {
     <div className="global-container">
       <div className="Filter">
         <img className="iphone" src="./src/assets/img/iphone.png" alt="iphone" />
+        <Filters characters={characters} setFilteredCharacters={setFilteredCharacters}/>
       </div>
 
       <div className="card-container">

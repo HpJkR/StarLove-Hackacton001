@@ -1,37 +1,45 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import './App.scss'
+import Filters from './components/Filters'
 import Cards from "./components/Cards";
+// import Cards from './components/Cards002'
 
-const App = () => {
-  const [peoples, setPeoples] = useState([]);
+ const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [characters, setCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
 
   useEffect(() => {
     fetch("https://miadil.github.io/starwars-api/api/all.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setPeoples(data);
-      });
-  }, []);
+        .then((res) => res.json())
+        .then((res) => 
+        {   
+            setCharacters(res);
+            setFilteredCharacters(res);
+        });
+}, []);
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => {
-      return prevIndex === 0 ? peoples.length - 1 : prevIndex - 1;
+   setCurrentIndex((prevIndex) => {
+      return prevIndex === 0 ? filteredCharacters.length - 1 : prevIndex - 1;
     });
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
-      return prevIndex === peoples.length - 1 ? 0 : prevIndex + 1;
+      return prevIndex === filteredCharacters.length - 1 ? 0 : prevIndex + 1;
     });
   };
 
   return (
     <>
       <Cards
-        peoples={peoples[currentIndex]}
+        characters={characters}
+        setFilteredCharacters={setFilteredCharacters}
+        peoples={filteredCharacters[currentIndex]}
         handlePrevious={handlePrevious}
         handleNext={handleNext}
-      />
+        />
     </>
   );
 };
