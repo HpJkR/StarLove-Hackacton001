@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import './App.scss'
-import Filters from './components/Filters'
+
 import Cards from "./components/Cards";
-// import Cards from './components/Cards002'
+
 
  const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

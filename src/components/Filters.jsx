@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import './Filters.scss'
+
 const Filters = ({characters, setFilteredCharacters}) => {
 
     const [selectedLocalisation, setSelectedLocalisation] = useState("");
@@ -152,7 +154,7 @@ const Filters = ({characters, setFilteredCharacters}) => {
     };
 
     return (
-        <div>
+        <div className="toggleSelect">
             <label htmlFor="localisation">Localisations</label>
             <select id="localisation" value={selectedLocalisation} onChange={handleLocalisationChange}>
                 <option value="">All planets</option>
