@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import './App.css'
+
+import Chat from './components/Chat'
+
+import './App.scss'
+
 
 function App() {
   
 
   return (
     <>
-     
+     <Chat/>
     </>
   )
 }
