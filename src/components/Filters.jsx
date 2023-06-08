@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Cards from "./Cards";
 
+import './Filters.scss'
+
 const Filters = () => {
 
     const [characters, setCharacters] = useState([]);
@@ -169,7 +171,7 @@ const Filters = () => {
     };
 
     return (
-        <div>
+        <div className="toggleSelect">
             <label htmlFor="localisation">Localisations</label>
             <select id="localisation" value={selectedLocalisation} onChange={handleLocalisationChange}>
                 <option value="">All planets</option>

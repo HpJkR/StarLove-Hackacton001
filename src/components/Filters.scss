@@ -1,0 +1,16 @@
+.toggleSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+
+    select{
+        color: #fff;
+        border: 2px solid;
+        border-radius: 20px;
+        text-align: center;
+        background-color: pink;
+    }
+}
+
