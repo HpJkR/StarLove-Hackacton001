@@ -38,7 +38,7 @@ const Cards = (props) => {
             <img className="left-arrow" src="./src/assets/img/left-arrow-solid-24.png" alt="left-arrow" onClick={handlePrevious}/>
             {/* <img className="heart" src="./src/assets/img/redHeart.png" alt="heart" /> */}
             <div className={isFavorite === true ? 'isFavorite' : 'notFavorite'} onClick={handleClickFavorite}></div>
-            <img className="right-arrow" src="./src/assets/img/right-arrow-solid-24.png" alt="right-arrow" onClick={handleNext}/>
+            <img className="right-arrow" src="./src/assets/img/right-arrow.png" alt="right-arrow" onClick={handleNext}/>
        </section>
         </div>
       </div>
