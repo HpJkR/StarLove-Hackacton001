@@ -1,12 +1,8 @@
 import { useState } from "react";
 
-<<<<<<< HEAD
 import './Filters.scss'
 
-const Filters = () => {
-=======
 const Filters = ({characters, setFilteredCharacters}) => {
->>>>>>> dev
 
     const [selectedLocalisation, setSelectedLocalisation] = useState("");
     const [selectedGender, setSelectedGender] = useState("");
