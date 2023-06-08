@@ -1,37 +1,39 @@
-const Cards = () => {
+const Cards = ({peoples}) => {
   return (
-    <div className="iphone">
-    
-        <section className="StarLove-logo">
-         <img className="settings"></img>
-         <h1>STARLOVE</h1>
-         <img className="dialog"></img>
-        </section>
-   
+    <div className="global-container">
 
-        <section className="Profile">
-          <div className="character">
-          <img
-            src="https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
-            alt="Luke Skywalker"/>
-          </div>
+      <div className="Filter">
+        <img className="iphone" src="./src/assets/img/iphone.png"></img>
+      </div>
+      {peoples.map((people, index) => (
+      <div className="card-container" key={people.id}>
+        
+          <img className="iphone" src="./src/assets/img/iphone.png"></img>
+          <div className="transform">
 
-        <div className="peopleName">
-          <h2>Luke Skywalker</h2>
-        </div>
-
-      </section>
+          <img className="settings"></img>
+          <img className="logo-rose" src="./src/assets/img/logo_rose.png"></img>
+          <img className="Chat"></img>
          
+         
+         <div className="img-container">
+          <img className="character" src={people.image} alt={people.name}/>
+         </div>
+
+          <div className="peopleName">
+            <h2>{people.name}</h2>
+          </div>
+        
+        
       <section className="footer-icons">
-        <img className="left-arrow"></img>
-        <img className="heart"></img>
-        <img className="right-arrow"></img>
+  
+        <img className="left-arrow" src=""></img>
+        <img className="heart" src=""></img>
       </section>
-   
-      
-    </div>
-   
-  );
-};
+          </div>
+      </div>
+      ))}
+      </div>
+)}
 
 export default Cards;
