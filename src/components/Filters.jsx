@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
-import Cards from "./Cards";
+import { useState } from "react";
 
+<<<<<<< HEAD
 import './Filters.scss'
 
 const Filters = () => {
+=======
+const Filters = ({characters, setFilteredCharacters}) => {
+>>>>>>> dev
 
-    const [characters, setCharacters] = useState([]);
     const [selectedLocalisation, setSelectedLocalisation] = useState("");
     const [selectedGender, setSelectedGender] = useState("");
     const [selectedSpecies, setSelectedSpecies] = useState("");
@@ -14,23 +16,8 @@ const Filters = () => {
     const [selectedEyeColor, setSelectedEyeColor] = useState("");
     const [selectedWeight, setSelectedWeight] = useState("");
     const [selectedHeight, setSelectedHeight] = useState("");
-    const [test, setTest] = useState([]);
+    // const [test, setTest] = useState([]);
 
-    useEffect(() => {
-        fetch("https://miadil.github.io/starwars-api/api/all.json")
-            .then((res) => res.json())
-            .then((res) => 
-            { 
-                setCharacters(res);
-                setTest(res);
-                console.log(res);
-            });
-                
-            
-
-    }, []);
-
-   
 
     const handleLocalisationChange = (e) => {
         const selectedValue = e.target.value;
@@ -164,7 +151,7 @@ const Filters = () => {
         }
                 
 
-        setTest(filteredResult);
+        setFilteredCharacters(filteredResult);
 
       
 
@@ -277,7 +264,7 @@ const Filters = () => {
             <select id="skinColor" value={selectedSkinColor} onChange={handleSkinColorChange}>
                 <option value="">All SkinColors</option>
                 <option value="light">Light</option>
-                <option value="Gold">Gold</option>
+                <option value="gold">Gold</option>
                 <option value="white, blue">White, Blue</option>
                 <option value="light, later pale">Light, Later Pale</option>
                 <option value="white, red">White, Red</option>
@@ -296,10 +283,11 @@ const Filters = () => {
                 <option value="blue-gray, yellow, white">Blue-gray, Yellow, White</option>
                 <option value="white, brown, purple">White, Brown, Purple</option>
                 <option value="yellow">Yellow</option>
-                <option value="orange and pink">Orange and Pink</option>
-                <option value="orange and pink">Orange and Pink</option>
-                <option value="orange and pink">Orange and Pink</option>
-                <option value="orange and pink">Orange and Pink</option>
+                <option value="pasty white">Pasty White</option>
+                <option value="orange">Orange</option>
+                <option value="tan-brown">Tan-Brown</option>
+                <option value="silver, red">Silver, Red</option>
+                <option value="white">White</option>
             </select>
 
             <label htmlFor="hairColor">HairColor</label>
@@ -329,6 +317,24 @@ const Filters = () => {
                 <option value="blue">Blue</option>
                 <option value="yellow">Yellow</option>
                 <option value="red">Red</option>
+                <option value="blue, yellow (dark side)">Blue, Yellow (dark side)</option>
+                <option value="brown">Brown</option>
+                <option value="hazel">Hazel</option>
+                <option value="gray-blue">Gray-blue</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+                <option value="green-gold">Green-gold</option>
+                <option value="blue; yellow/red (dark side)">Blue; Yellow/Red (dark side)</option>
+                <option value="pale blue-green">Pale blue-green</option>
+                <option value="brownish black">Brownish black</option>
+                <option value="black">Black</option>
+                <option value="pink">Pink</option>
+                <option value="royal-blue">Royal-blue</option>
+                <option value="black with white pupils">Black with white pupils</option>     
+                <option value="red, blue">Red, Blue</option>
+                <option value="bluish green">Bluish green</option>
+                <option value="gold">Gold</option>
+                <option value="white">White</option>
             </select>
 
             <label htmlFor="weight">Weight</label>
@@ -352,9 +358,7 @@ const Filters = () => {
                 <option value="1.91">1.90 or more</option>
 
             </select>
-            {test.map((charac, id) => (
-                <Cards caract={charac.localisation} gender={charac.gender} name={charac.name} image={charac.image} key={charac.id} />))}
-
+            
         </div>
     )
 }
