@@ -1,104 +1,330 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
-
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
-#background {
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Roboto';
-    // margin: 50% 0 0 0;
-    // position: absolute;
-    background-image: url("src/assets/img/vecteezy_black-sky-with-stars-space-background__142.jpg");
-}
+ #background {
+   height: 100vh;
+   overflow: hidden;
+ }
 
 #background::after {
-    content:'';
-    top: 0;
-    width: 100vw;
-    height: 50vh;
-    background: linear-gradient(180deg, rgba(20,20,20,1) 40%, rgba(20,20,20,0) 100%);
-
-}
-.wrapper {
-    display: flex;
-    height: 100%;
-    width: 60%;
-    margin: 0 auto;
-    perspective: 450px;
-    z-index: -1;
+  content: '';
+  top: 0;
+  width: 100vw;
+  height: 50vh;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 1) 40%, rgba(20, 20, 20, 0) 100%);
 }
 
-.scroll-text {
-    color: #ffc909;
-    font-size: 3vw;
-    height: auto;
-    line-height: 1.5em;
-    font-weight: bold;
-    text-align: justify;
-    position: relative;
-    animation: scroll 80s linear forwards;
-    transform: rotateX(20deg);
-    z-index: -1;
-}
-
-h1, h2 {
-    text-align: center;
-    margin: 60px;
-}
-
-@keyframes scroll {
-    from { top: 0; transform: translateZ(0) rotateX(20deg); }
-    to { top : -7500px; transform: translateZ(-2500px) rotateX(21deg) ; }
-}
-
-// @keyframes movingtop {
-//     from {top: 30vh ; transform: translateZ(-2500px); height: 70vh; width: auto;}
-//     to {top :0 ; transform: translateZ(-2500px)}
-// }
-
-
-.divButton {
-    display: flex;
-    justify-content: center;
-    border: 2px solid red;
-    height: auto;
-    width: auto;
-    
-}
-
-button  {
-    background-color: #F084E4;
-    border: none;
-    border-radius: 8px;
-    width: 200px;
-    height: 100px;
+ .wrapper {
    display: flex;
-   justify-content: center;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    transform: none;
-    perspective: none;
-    border-radius: 100%;
-  }
+   height: 100%;
+   width: 60%;
+   margin: 0 auto;
+   perspective: 450px;
+   z-index: -1;
+ }
 
-  #logo {
-    background: linear-gradient(0deg, rgba(228, 174, 56, 0) 0%, rgb(0, 0, 0) 55%);
+ .scroll-text {
+   color: #ffc909;
+   font-size: 3vw;
+   height: auto;
+   line-height: 1.5em;
+   font-weight: bold;
+   text-align: justify;
+   position: relative;
+   transform: rotateX(20deg);
+   z-index: -1;
+   animation: scroll 90s linear forwards;
+ }
+
+ @keyframes scroll {
+   from {
+     top: 1000px;
+     transform: translateZ(0) rotateX(20deg);
+   }
+   to {
+     top: -7500px;
+     transform: translateZ(-2000px) rotateX(21deg);
+   }
+ }
+
+ @keyframes buttonAppear {
+     0% {
+       bottom: -200px;
+     }
+     100% {
+       bottom: 70vh;
+       opacity: 1;
+     }
+   }
+
+   @keyframes battement {
+     to {
+         text-shadow: 0 0 7px #fff, 
+         0 0 10px #fff, 
+         0 0 42px rgb(230, 18, 124),   
+         0 0 77px rgb(230, 18, 124), 
+         0 0 100px rgb(230, 18, 124) ;
+         box-shadow: 0 0 7px #fff, 
+         0 0 10px #fff, 
+         0 0 42px rgb(230, 18, 124),   
+         0 0 77px rgb(230, 18, 124), 
+         0 0 100px rgb(230, 18, 124) ;
+       } ;
+     }
+  
+
+ h1,
+ h2 {
+   text-align: center;
+   margin: 60px;
+ }
+
+ .divButton {
+     position: fixed;
+     display: flex;
+     bottom: 30%;
+     left: 50%;
+     opacity: 0;
+     transform: translateX(-50%);
+     transition: bottom 0.5s ease-in-out;
+     animation: buttonAppear 9s ease-in-out 19s forwards;
+   }
+  
+   .divButton.show {
+     bottom: 50vh;
+     transition: bottom 0.5s ease-in-out;
+   }
+  
+   button {
+     background-color: #F084E4;
+     border: none;
+     border-radius: 50%;
+     width: 200px;
+     height: 200px;
+     display: flex;
+     padding-top: 37%;
+     justify-content: center;
+     font-size: 12px;
+     color: white;
+     font-weight: bold;
+     box-shadow: 0 0 0 0 #F084E4;
+     animation: battement 1.5s infinite cubic-bezier(.66, 0, 0, 1);
+     text-decoration: none;
+     text-align: center;
+     font-size: 50px;
+ }
+  
+
+ button:hover {
+     background-color: #f7d263;
+     color: black;
+     animation: none;
+     box-shadow: 0 0 7px #fff, 
+         0 0 10px #fff, 
+         0 0 42px rgb(245, 212, 79),   
+         0 0 77px rgb(251, 234, 80), 
+         0 0 100px rgb(246, 208, 94) 
+ }
+#logo {
+  background: linear-gradient(0deg, rgba(228, 174, 56, 0) 0%, rgb(0, 0, 0) 55%);
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  height: 45vh;
+  top: 0;
+  width: 100vw;
+  position: absolute;
+  img {
+    height: 30vh;
+  width: auto;
+  position: relative;
+  }
+}
+
+.divButton  {
+    height: 72vh;
+    width: auto;
+   padding: 20px;
+   z-index: 60;
+}
+
+.sabre {
     display: flex;
-    justify-content: center;
-    z-index: 9;
-    height: 45vh;
+   justify-content: center;
+    img {
+        width:25vw;
+    }
+}
+
+
+    
+    
+    
+    section{
+    
     position: relative;
     
-}
-
-img {
-    height: 30vh;
-    width: auto;
+    width: 100%;
     
-}
+    height: 100vh;
+    
+    overflow: hidden;
+    
+    background: #000200;
+    
+    display: flex;
+    
+    justify-content: center;
+    
+    align-items: center;
+    
+    }
+    
+    
+    
+    section .star {
+    
+    position: absolute;
+    
+    top: 0;
+    
+    left: 0;
+    
+    width: 100%;
+    
+    height: 100%;
+    
+    pointer-events: none;
+    
+    animation: animate 8s ease-in-out infinite,
+    
+    backgroundmove 16s linear infinite;
+    
+    }
+    
+    
+    
+    section .star.star1{
+    
+    animation-delay: 0s;
+    
+    background: url(src/assets/img/star1.png);
+    
+    }
+    
+    
+    
+    section .star.star2{
+    
+    animation-delay: -1s;
+    
+    background: url(src/assets/img/star2.png);
+    
+    }
+    
+    
+    
+    section .star.star3{
+    
+    animation-delay: -2s;
+    
+    background: url(src/assets/img/star3.png);
+    
+    }
+    
+    
+    
+    section .star.star4{
+    
+    animation-delay: -3s;
+    
+    background: url(src/assets/img/star4.png);
+    
+    }
+    
+    
+    
+    section .star.star5{
+    
+    animation-delay: -4s;
+    
+    background: url(src/assets/img/star5.png);
+    
+    }
+    
+    
+    
+    section .star.star6{
+    
+    animation-delay: -5s;
+    
+    background: url(src/assets/img/star6.png);
+    
+    }
+    
+    
+    
+    section .star.star7{
+    
+    animation-delay: -6s;
+    
+    background: url(src/assets/img/star7.png);
+    
+    }
+    
+    
+    
+    section .star.star8{
+    
+    animation-delay: -7s;
+    
+    background: url(src/assets/img/star8.png);
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    @keyframes animate {
+    
+    0%, 20%, 40%, 60%, 80%, 100% {
+    
+    opacity: 0;
+    
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+    
+    opacity: 1;
+    
+    }
+    
+    }
+    
+    
+    
+    @keyframes backgroundmove {
+    
+    0%{
+    
+    transform: scale(1)
+    
+    }
+    
+    100%{
+    
+    transform: scale(2)
+    
+    }
+    
+    }
