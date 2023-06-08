@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import './App.scss'
 import Filters from './components/Filters'
-import Cards from './components/Cards002'
+import Cards from "./components/Cards";
+// import Cards from './components/Cards002'
 
-function App() {
+ const App = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
 
@@ -16,16 +18,30 @@ function App() {
             setFilteredCharacters(res);
         });
 }, []);
-  
+
+  const handlePrevious = () => {
+   setCurrentIndex((prevIndex) => {
+      return prevIndex === 0 ? filteredCharacters.length - 1 : prevIndex - 1;
+    });
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => {
+      return prevIndex === filteredCharacters.length - 1 ? 0 : prevIndex + 1;
+    });
+  };
 
   return (
     <>
-     <div>
-      <Filters characters={characters} setFilteredCharacters={setFilteredCharacters}/>
-      <Cards characters={filteredCharacters}/>
-      </div>
+      <Cards
+        characters={characters}
+        setFilteredCharacters={setFilteredCharacters}
+        peoples={filteredCharacters[currentIndex]}
+        handlePrevious={handlePrevious}
+        handleNext={handleNext}
+        />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
