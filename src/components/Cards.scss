@@ -10,7 +10,19 @@ background-repeat: no-repeat;
 .global-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 100px 50px 50px 50px;
+    margin: 100px 30px 50px 30px;
+
+.bulles-filter{
+    justify-content: flex-start;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.bulle-droite {
+    justify-content: flex-end;
+    height: 200px;
+    margin-top: 50px;
+}
 
 .isFavorite {
     width: 54px;
