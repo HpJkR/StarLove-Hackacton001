@@ -29,18 +29,24 @@ const Cards = (props) => {
     
     <>
     <div className="global-container">
+      <img className="bulles-filter" 
+              src="./src/assets/img/bulles_filters.png" />
+   
       <div className="Filter">
         <Filters
           characters={characters}
           setFilteredCharacters={setFilteredCharacters}
         />
+      
         <img
           className="iphoneLeft"
           src="./src/assets/img/iphone.png"
           alt="iphone"
         />
-      </div>
 
+      </div>
+      
+    
       <div className="card-container">
         <Chat/>
         <img
@@ -48,6 +54,7 @@ const Cards = (props) => {
           src="./src/assets/img/iphone.png"
           alt="iphone"
         />
+     
         <div className="transform">
           <div className="header-icons">
             <img
@@ -97,7 +104,11 @@ const Cards = (props) => {
             </div>
           </div>
         </div>
+        <img className="bulle-droite" 
+      src="./src/assets/img/bulle_droite.png" />
       </div>
+
+   
     </>
   );
 }
