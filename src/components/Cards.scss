@@ -1,54 +1,53 @@
 body {
-
-background-image: url('src/assets/img/blur2.png');
-height: 100vh;
-background-size: cover;
-background-repeat: no-repeat;
-
+  background-image: url("src/assets/img/blur2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .global-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 100px 50px 50px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px 50px 50px 50px;
 
-.isFavorite {
+  .isFavorite {
     width: 54px;
     height: 54px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg');
-    background-size: 100%;
-    align-self: flex-start;
-  }
-  
-.notFavorite {
-    width: 54px;
-    height: 54px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg');
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
     background-size: 100%;
     align-self: flex-start;
   }
 
-.card-container {
+  .notFavorite {
+    width: 54px;
+    height: 54px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
+    background-size: 100%;
+    align-self: flex-start;
+  }
+
+  .card-container {
     display: flex;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 207, 0, 1) 0%,
+      rgba(0, 226, 255, 1) 100%
+    );
     border-radius: 58px;
     height: 600px;
     width: 344px;
-    
-    
 
     .logo-rose {
-        height: 150px;
+      height: 150px;
     }
 
     h2 {
-        font-family: 'Gotham Rounded', sans-serif;
-        font-size: 23px;
+      font-family: "Gotham Rounded", sans-serif;
+      font-size: 23px;
     }
+  }
 
-}
-
-.peopleName {
+  .peopleName {
     align-items: center;
     margin: 20px;
     background-color: white;
@@ -59,95 +58,99 @@ background-repeat: no-repeat;
     // box-shadow: 5px 5px 5px rgb(255, 196, 0);
     border: solid 3px #ffd900;
     box-shadow: 5px 5px 5px rgb(255, 217, 0);
-}
-h2 {
+  }
+  h2 {
     padding: 0px;
     margin: 0px;
     padding-top: 5px;
-}
-.header-icons {
+  }
+  .header-icons {
     display: flex;
     flex-direction: row;
     .settings {
-        height: 30px;
+      height: 30px;
     }
     .Chat {
-        
-        height: 30px;
+      height: 30px;
     }
-}
+  }
 
-
-.iphoneRight {  
+  .iphoneRight {
     height: 700px;
     width: 347px;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 207, 0, 1) 0%,
+      rgba(0, 226, 255, 1) 100%
+    );
     border-radius: 58px;
-    
-}
-.iphoneLeft {
+  }
+  .iphoneLeft {
     height: 700px;
     width: 347px;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 207, 0, 1) 0%,
+      rgba(0, 226, 255, 1) 100%
+    );
     border-radius: 58px;
-}
+  }
 
-.img-container {
+  .img-container {
     display: flex;
     width: 280px;
     height: 280px;
     border-radius: 30px;
 
     .character {
-        object-fit: cover;
-        object-position: top;
-        aspect-ratio: 1/2;
-        border-radius: 30px;
-        border: solid 3px rgb(160, 7, 160);
-        box-shadow: 5px 5px 5px rgb(160, 7, 160);
-        width: 280px;
+      object-fit: cover;
+      object-position: top;
+      aspect-ratio: 1/2;
+      border-radius: 30px;
+      border: solid 3px rgb(160, 7, 160);
+      box-shadow: 5px 5px 5px rgb(160, 7, 160);
+      width: 280px;
     }
-}
+  }
 
-.transform {
+  .transform {
     transform: translate(-314px, 60px);
     text-align: center;
-}
+  }
 
-.footer-icons {
+  .footer-icons {
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
     margin: 25px;
     z-index: 1000;
     .heart {
-        height: 50px;
+      height: 50px;
     }
-}
+  }
 
-.toggleSelect {
+  .toggleSelect {
     z-index: 60;
     display: flex;
-    position: absolute
-}
+    position: absolute;
+  }
 
-.Filter {
+  .Filter {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:0 30px
-    
-}
-}
-
-.left-arrow{
-    width: 50px;
-    height: 50px;
+    margin: 0 30px;
+  }
 }
 
-.right-arrow{
-    width: 50px;
-    height: 50px;
-    
+.left-arrow {
+  width: 50px;
+  height: 50px;
 }
 
+.right-arrow {
+  width: 50px;
+  height: 50px;
+}
