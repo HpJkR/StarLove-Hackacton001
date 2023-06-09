@@ -1,5 +1,11 @@
 body {
-  background-color: fuchsia;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    230deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(59, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .global-container {
