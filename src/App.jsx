@@ -34,10 +34,8 @@ const App = () => {
         handleNext={handleNext}
       />
 
-      <Favorite 
-       peoples={peoples} />
-  
-    </> 
+      <Favorite peoples={peoples} />
+    </>
   );
 };
 
