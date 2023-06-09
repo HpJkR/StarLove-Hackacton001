@@ -1,109 +1,120 @@
 body {
-  background-color: fuchsia;
+    background-color: fuchsia;
 }
 
 .global-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 50px;
-}
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
 
+}
+ 
 .isFavorite {
-  width: 40px;
-  height: 40px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
-  background-size: 100%;
-  align-self: flex-start;
-}
-
+    width: 40px;
+    height: 40px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg');
+    background-size: 100%;
+    align-self: flex-start;
+  }
+  
 .notFavorite {
-  width: 40px;
-  height: 40px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
-  background-size: 100%;
-  align-self: flex-start;
-}
+    width: 40px;
+    height: 40px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg');
+    background-size: 100%;
+    align-self: flex-start;
+  }
 
 .card-container {
-  display: flex;
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(255, 207, 0, 1) 0%,
-    rgba(0, 226, 255, 1) 100%
-  );
-  border-radius: 58px;
-  height: 698px;
-  width: 344px;
+    display: flex;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
+    border-radius: 58px;
+    height: 698px;
+    width: 344px;
 
-  .logo-rose {
+   .logo-rose {
     height: 150px;
-  }
+   }
 
-  h2 {
-    font-family: "Gotham Rounded", sans-serif;
-    font-size: 23px;
-  }
+    h2 {
+        font-family: 'Gotham Rounded', sans-serif;
+        font-size: 23px;
+    }
+
 }
 
 .peopleName {
-  align-items: center;
-  margin: 20px;
-  background-color: white;
-  border-radius: 25px;
-  height: 80px;
-  padding: 20px 0 0 0;
-  border: solid 3px rgb(255, 217, 0);
-  box-shadow: 5px 5px 5px rgb(255, 217, 0);
+    align-items: center;
+    margin: 20px;
+    background-color: white;
+    border-radius: 25px;
+    height: 80px;
+    padding: 20px 0 0 0;
+    border: solid 3px rgb(255, 217, 0);
+    box-shadow: 5px 5px 5px rgb(255, 217, 0);
 }
 
 .header-icons {
-  display: flex;
-  flex-direction: row;
 
-  .settings {
-    height: 30px;
-  }
+    display: flex;
+    flex-direction: row;
 
-  .Chat {
-    height: 30px;
-  }
+    .settings {
+
+        height: 30px;
+    }
+
+    .Chat {
+
+        height: 30px;
+    }
 }
 
-.iphone {
-  height: 700px;
-  width: 347px;
+
+.iphone {  
+    height: 700px;
+    width: 347px;
 }
 
 .img-container {
-  display: flex;
-  width: 280px;
-  height: 280px;
-  border-radius: 30px;
 
-  .character {
+    display: flex;
+    width: 280px;
+    height: 280px;
+    border-radius: 30px;
+    
+
+.character {
+ 
     object-fit: cover;
     object-position: top;
     aspect-ratio: 1/2;
     border-radius: 30px;
     border: solid 3px fuchsia;
-    box-shadow: 5px 5px 5px fuchsia;
+    box-shadow: 5px 5px 5px fuchsia; 
     width: 280px;
-  }
+}
+
 }
 
 .transform {
-  transform: translate(-314px, 60px);
-  text-align: center;
+    transform: translate(-314px, 60px);
+    text-align: center;
 }
 
 .footer-icons {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  margin: 25px;
 
-  .heart {
-    height: 50px;
-  }
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin: 25px;
+
+    .heart {
+        height: 50px;
+    }
+
+   
+
+ 
 }
+
