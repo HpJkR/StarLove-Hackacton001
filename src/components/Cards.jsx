@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
 import Filters from "./Filters";
-import Chat from "./Chat"
+import Chat from "./Chat";
 
 const Cards = (props) => {
-  const {peoples, handlePrevious, handleNext, characters, setFilteredCharacters} = props;
+  const {
+    peoples,
+    handlePrevious,
+    handleNext,
+    characters,
+    setFilteredCharacters,
+  } = props;
 
   const [isFavorite, setIsFavorite] = useState(
     () => JSON.parse(localStorage.getItem("favorites")) || []
@@ -26,72 +32,75 @@ const Cards = (props) => {
   }, [isFavorite]);
 
   return (
-    
     <>
-    <div className="global-container">
-      <img className="bulles-filter" 
-              src="./src/assets/img/bulles_filters.png" />
-   
-      <div className="Filter">
-        <Filters
-          characters={characters}
-          setFilteredCharacters={setFilteredCharacters}
-        />
-      
+      <div className="store">
+        <img src="src/assets/img/pngegg.png" alt="" />
+      </div>
+      <div className="global-container">
         <img
-          className="iphoneLeft"
-          src="./src/assets/img/iphone.png"
-          alt="iphone"
+          className="bulles-filter"
+          src="./src/assets/img/bulles_filters.png"
         />
 
-      </div>
-      
-    
-      <div className="card-container">
-        <Chat/>
-        <img
-          className="iphoneRight"
-          src="./src/assets/img/iphone.png"
-          alt="iphone"
-        />
-     
-        <div className="transform">
-          <div className="header-icons">
-            <img
-              className="settings"
-              src="./src/assets/img/setting.png"
-              alt="settings"
-            />
-            <img
-              className="logo-rose"
-              src="./src/assets/img/logo_rose.png"
-              alt="logo_rose"
-            />
-            {/* <img
+        <div className="Filter">
+          <Filters
+            characters={characters}
+            setFilteredCharacters={setFilteredCharacters}
+          />
+
+          <img
+            className="iphoneLeft"
+            src="./src/assets/img/iphone.png"
+            alt="iphone"
+          />
+        </div>
+
+        <div className="card-container">
+          <Chat />
+          <img
+            className="iphoneRight"
+            src="./src/assets/img/iphone.png"
+            alt="iphone"
+          />
+
+          <div className="transform">
+            <div className="header-icons">
+              <img
+                className="settings"
+                src="./src/assets/img/setting.png"
+                alt="settings"
+              />
+              <img
+                className="logo-rose"
+                src="./src/assets/img/logo_rose.png"
+                alt="logo_rose"
+              />
+              {/* <img
               className="Chat"
               src="./src/assets/img/message-rounded-dots-solid-24.png"
               alt="chat"
             /> */}
-          </div>
+            </div>
 
-          <div className="img-container">
-            <img
-              className="character"
-              src={peoples?.image}
-              alt={peoples?.name}
-            />
-          </div>
+            <div className="img-container">
+              <img
+                className="character"
+                src={peoples?.image}
+                alt={peoples?.name}
+              />
+            </div>
 
             <div className="peopleName">
               <h2>{peoples?.name}</h2>
             </div>
 
             <div className="footer-icons">
-              <img 
+              <img
                 className="left-arrow"
                 src="./src/assets/img/left-arrow.png"
                 alt="left-arrow"
-                onClick={handlePrevious} />
+                onClick={handlePrevious}
+              />
               <div
                 className={isCardFavorite ? "isFavorite" : "notFavorite"}
                 onClick={handleClickFavorite}
@@ -100,17 +109,15 @@ const Cards = (props) => {
                 className="right-arrow"
                 src="./src/assets/img/right-arrow.png"
                 alt="right-arrow"
-                onClick={handleNext} /> 
+                onClick={handleNext}
+              />
             </div>
           </div>
         </div>
-        <img className="bulle-droite" 
-      src="./src/assets/img/bulle_droite.png" />
+        <img className="bulle-droite" src="./src/assets/img/bulle_droite.png" />
       </div>
-
-   
     </>
   );
-}
+};
 
 export default Cards;
