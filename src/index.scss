@@ -1,2 +1,25 @@
 @import "./components/Cards.scss";
+<<<<<<< HEAD
 @import "./App.scss";
+=======
+@import "./App.scss";
+
+@import url('https://fonts.cdnfonts.com/css/gotham-rounded');
+
+
+@font-face {
+    font-family: "Starjedi";
+    src: url("./assets/fonts/Starjedi.ttf");
+}
+
+@font-face {
+    font-family: "LucySaid";
+    src: url("./assets/fonts/LucySaidOk.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+>>>>>>> ede1fd8f8074f0af7b5cdc60279c4a07025fd8e1
