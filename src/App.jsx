@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import './App.scss'
-import Filters from './components/Filters'
+
 import Cards from "./components/Cards";
+
 import Chat from "./components/Chat"
+
+
 
 
  const App = () => {
