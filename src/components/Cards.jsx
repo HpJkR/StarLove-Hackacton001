@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import Filters from "./Filters";
+import Chat from "./Chat"
 
-function Cards(props) {
-  const { peoples, handlePrevious, handleNext } = props;
+const Cards = (props) => {
+
+  const { peoples, handlePrevious, handleNext, characters, setFilteredCharacters} = props;
 
   const [isFavorite, setIsFavorite] = useState(
     () => JSON.parse(localStorage.getItem("favorites")) || []
@@ -33,9 +36,11 @@ function Cards(props) {
             className="iphone"
             src="./src/assets/img/iphone.png"
             alt="iphone" />
+    <Filters characters={characters} setFilteredCharacters={setFilteredCharacters}/>
         </div>
 
         <div className="card-container">
+          <Chat />
           <img
             className="iphone"
             src="./src/assets/img/iphone.png"
@@ -87,8 +92,6 @@ function Cards(props) {
         </div>
       </div>
     </section>
-
-
   );
 }
 
