@@ -3,6 +3,10 @@ import './App.scss'
 
 import Cards from "./components/Cards";
 
+import Chat from "./components/Chat"
+
+
+
 
  const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,6 +44,8 @@ import Cards from "./components/Cards";
         handlePrevious={handlePrevious}
         handleNext={handleNext}
         />
+
+        
     </>
   );
 };
