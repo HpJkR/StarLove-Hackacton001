@@ -1,1 +1,23 @@
-@import './components/Chat.scss'
+@import "./components/Filters.scss";
+@import "./components/Cards.scss";
+@import "./App.scss";
+@import "./components/Chat.scss";
+
+@import url('https://fonts.cdnfonts.com/css/gotham-rounded');
+
+
+@font-face {
+    font-family: "Starjedi";
+    src: url("./assets/fonts/Starjedi.ttf");
+}
+
+@font-face {
+    font-family: "LucySaid";
+    src: url("./assets/fonts/LucySaidOk.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
