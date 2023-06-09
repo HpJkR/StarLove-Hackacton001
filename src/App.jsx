@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import {Routes, Route} from 'react-router-dom'
+
 import './App.scss'
 
 import Cards from "./components/Cards";
@@ -36,15 +38,16 @@ import HomePage from "./components/HomePage.jsx";
 
   return (
     <>
-
-<HomePage />
-      <Cards
-        characters={characters}
+<Routes>
+<Route path="/" element={<HomePage/>} />
+<Route path="/Cards" element={<Cards  characters={characters}
         setFilteredCharacters={setFilteredCharacters}
         peoples={filteredCharacters[currentIndex]}
         handlePrevious={handlePrevious}
-        handleNext={handleNext}
-        />
+        handleNext={handleNext}/>} 
+       />
+</Routes>
+      
 
         
     </>

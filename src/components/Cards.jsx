@@ -26,7 +26,8 @@ const Cards = (props) => {
   }, [isFavorite]);
 
   return (
-    <section>
+    
+    <>
     <div className="global-container">
       <div className="Filter">
         <Filters
@@ -59,11 +60,11 @@ const Cards = (props) => {
               src="./src/assets/img/logo_rose.png"
               alt="logo_rose"
             />
-            <img
+            {/* <img
               className="Chat"
               src="./src/assets/img/message-rounded-dots-solid-24.png"
               alt="chat"
-            />
+            /> */}
           </div>
 
           <div className="img-container">
@@ -78,8 +79,8 @@ const Cards = (props) => {
               <h2>{peoples?.name}</h2>
             </div>
 
-            <section className="footer-icons">
-              <img
+            <div className="footer-icons">
+              <img 
                 className="left-arrow"
                 src="./src/assets/img/left-arrow.png"
                 alt="left-arrow"
@@ -92,12 +93,12 @@ const Cards = (props) => {
                 className="right-arrow"
                 src="./src/assets/img/right-arrow.png"
                 alt="right-arrow"
-                onClick={handleNext} />
-            </section>
+                onClick={handleNext} /> 
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 

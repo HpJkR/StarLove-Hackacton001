@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.scss";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [buttonVisible, setButtonVisible] = useState(false);
@@ -69,8 +70,6 @@ const HomePage = () => {
                 "StarLove," the revolutionary dating application that allows you
                 to find your soulmate among the entire universe. Dive into a
                 cosmic adventure where interstellar encounters become a reality.
-                Don't let love be a distant galaxy. Download "StarLove" today
-                and let the Force guide you to your soulmate.
               </p>
               <br></br>
               <p>
@@ -82,9 +81,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className={`divButton ${buttonVisible ? "show" : ""}`}>
-              <button onClick={() => console.log("Button clicked!")}>
-                FIND
-              </button>
+            <Link to="/cards"><button className="find" onClick={() => console.log("Button clicked!")}>FIND</button></Link>
             </div>
           </div>
         </div>

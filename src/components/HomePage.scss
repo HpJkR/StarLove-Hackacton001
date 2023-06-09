@@ -101,7 +101,7 @@
      transition: bottom 0.5s ease-in-out;
    }
   
-   button {
+   .find {
      background-color: #F084E4;
      border: none;
      border-radius: 50%;
@@ -121,7 +121,7 @@
  }
   
 
- button:hover {
+ .find:hover {
      background-color: #f7d263;
      color: black;
      animation: none;

@@ -6,13 +6,13 @@
 .chatGlobal{
   position: absolute;
   width: 344px;
-  height: 698px;
+  // height: 698px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   // align-items: flex-around;
   margin: 20px  0 0 20px;
-  z-index: 1100;
+  z-index: 900;
 }
 
  
@@ -35,13 +35,12 @@
   transition: transform 0.3s ease;
   transform: scaleY(0);
   transform-origin: bottom;
-  margin-bottom: 80px;
   padding: 5px;
   
   &.open {
     transform-origin: bottom;
     transform:scaleY(1);
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
     // position: fixed;
     // bottom: 2px;
     
@@ -104,9 +103,9 @@
   display: flex;
   align-items: center;
   width: 250px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   margin-left: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   
 
   input[type="text"] {
@@ -119,7 +118,7 @@
     height: fit-content;
   }
 
-  button {
+  .send {
     padding: 5px 10px;
     background-color: #f084e4;
     color: white;

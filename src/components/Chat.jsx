@@ -82,7 +82,7 @@ const Chat = () => {
                 onKeyDown={handleKeyDown}
                 placeholder="Type your message..."
               />
-              <button onClick={handleSendMessage}>Send</button>
+              <button className='send' onClick={handleSendMessage}>Send</button>
             </div>
           </div>
         </div>
