@@ -40,7 +40,7 @@ const Chat = () => {
   useEffect(() => {
     const initialMessage = {
       id: 1,
-      text: "Bonjour ! Veuillez rester courtois s'il vous plait.  ", 
+      text: "Bienvenue à toi jeune Padawan, un traducteur est appliqué pour faciliter les échanges intergalactiques. Et surtout, n'oublie pas de rester courtois !", 
       isUser: false, 
     };
 
