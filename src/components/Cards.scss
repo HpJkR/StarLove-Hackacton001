@@ -1,8 +1,10 @@
 body {
 
 background-image: url('src/assets/img/blur2.png');
-background-size: 100%;
-object-fit: cover;
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+
 }
 
 .global-container {
@@ -11,16 +13,16 @@ object-fit: cover;
     margin: 100px 50px 50px 50px;
 
 .isFavorite {
-    width: 40px;
-    height: 40px;
+    width: 54px;
+    height: 54px;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg');
     background-size: 100%;
     align-self: flex-start;
   }
   
 .notFavorite {
-    width: 40px;
-    height: 40px;
+    width: 54px;
+    height: 54px;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg');
     background-size: 100%;
     align-self: flex-start;
@@ -30,8 +32,10 @@ object-fit: cover;
     display: flex;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
     border-radius: 58px;
-    height: 698px;
+    height: 600px;
     width: 344px;
+    
+    
 
     .logo-rose {
         height: 150px;
@@ -59,6 +63,7 @@ object-fit: cover;
 h2 {
     padding: 0px;
     margin: 0px;
+    padding-top: 5px;
 }
 .header-icons {
     display: flex;
@@ -131,5 +136,18 @@ h2 {
     justify-content: center;
     align-items: center;
     margin:0 30px
+    
 }
 }
+
+.left-arrow{
+    width: 50px;
+    height: 50px;
+}
+
+.right-arrow{
+    width: 50px;
+    height: 50px;
+    
+}
+

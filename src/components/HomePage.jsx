@@ -81,8 +81,12 @@ const HomePage = () => {
               </div>
             </div>
             <div className={`divButton ${buttonVisible ? "show" : ""}`}>
-            <Link to="/cards"><button className="find" onClick={() => console.log("Button clicked!")}>FIND</button></Link>
-            </div>
+            <Link to="/cards" style={{ textDecoration: "none" }}>
+                <button
+                  className="find"
+                  onClick={() => console.log("Button clicked!")}>FIND</button>
+              </Link>            
+              </div>
           </div>
         </div>
       </section>

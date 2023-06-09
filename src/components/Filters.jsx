@@ -155,9 +155,9 @@ const Filters = ({characters, setFilteredCharacters}) => {
 
     return (
         <div className="toggleSelect">
-            <label htmlFor="localisation">Localisations</label>
+            <label htmlFor="localisation">LOCALISATIONS</label>
             <select id="localisation" value={selectedLocalisation} onChange={handleLocalisationChange}>
-                <option value="">All planets</option>
+                <option value="">All Planets</option>
                 <option value="tatooine">Tatooine</option>
                 <option value="naboo">Naboo</option>
                 <option value="alderaan">Alderann</option>
@@ -207,14 +207,14 @@ const Filters = ({characters, setFilteredCharacters}) => {
 
             </select>
 
-            <label htmlFor="gender">Genders</label>
+            <label htmlFor="gender">GENDERS</label>
             <select id="gender" value={selectedGender} onChange={handleGenderChange}>
-                <option value="">All genders</option>
+                <option value="">All Genders</option>
                 <option value="male">Males</option>
                 <option value="female">Females</option>
             </select>
 
-            <label htmlFor="species">Specie</label>
+            <label htmlFor="species">SPECIE</label>
             <select id="species" value={selectedSpecies} onChange={handleSpeciesChange}>
                 <option value="">All Species</option>
                 <option value="human">Humans</option>
@@ -256,9 +256,9 @@ const Filters = ({characters, setFilteredCharacters}) => {
                 <option value="pau'an">Pau'ans</option>
             </select>
 
-            <label htmlFor="skinColor">SkinColor</label>
+            <label htmlFor="skinColor">SKIN COLOR</label>
             <select id="skinColor" value={selectedSkinColor} onChange={handleSkinColorChange}>
-                <option value="">All SkinColors</option>
+                <option value="">All Skin Colors</option>
                 <option value="light">Light</option>
                 <option value="gold">Gold</option>
                 <option value="white, blue">White, Blue</option>
@@ -286,9 +286,9 @@ const Filters = ({characters, setFilteredCharacters}) => {
                 <option value="white">White</option>
             </select>
 
-            <label htmlFor="hairColor">HairColor</label>
+            <label htmlFor="hairColor">HAIR COLOR</label>
             <select id="hairColor" value={selectedHairColor} onChange={handleHairColorChange}>
-                <option value="">All HairsColors</option>
+                <option value="">All Hairs Colors</option>
                 <option value="brown">Brown</option>
                 <option value="blond">Blond</option>
                 <option value="brown, later graying">Brown, later graying</option>
@@ -307,9 +307,9 @@ const Filters = ({characters, setFilteredCharacters}) => {
                 
             </select>
 
-            <label htmlFor="eyeColor">eyeColor</label>
+            <label htmlFor="eyeColor">EYE COLOR</label>
             <select id="eyeColor" value={selectedEyeColor} onChange={handleEyeColorChange}>
-                <option value="">All EyesColors</option>
+                <option value="">All Eyes Colors</option>
                 <option value="blue">Blue</option>
                 <option value="yellow">Yellow</option>
                 <option value="red">Red</option>
@@ -333,7 +333,7 @@ const Filters = ({characters, setFilteredCharacters}) => {
                 <option value="white">White</option>
             </select>
 
-            <label htmlFor="weight">Weight</label>
+            <label htmlFor="weight">WEIGHT</label>
             <select id="mass" value={selectedWeight} onChange={handleWeightChange}>
                 <option value="">All Weights</option>
                 <option value="49">49 or less</option>
@@ -344,7 +344,7 @@ const Filters = ({characters, setFilteredCharacters}) => {
                 
             </select>
 
-            <label htmlFor="height">Heights</label>
+            <label htmlFor="height">HEIGHT</label>
             <select id="height" value={selectedHeight} onChange={handleHeightChange}>
                 <option value="">All Heights</option>
                 <option value="1.45">1.45 or less</option>

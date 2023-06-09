@@ -53,9 +53,9 @@ const Chat = () => {
         <div className="menuGeneral">
           <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={handleToggleMenu}>
             {isOpen ? (
-              <img src="../src/assets/img/x-regular-24.png" alt="close icon" />
+              <img src="../src/assets/img/x-red.png" alt="close icon" />
             ) : (
-              <img src="../src/assets/img/icon-message.png" alt="chat icon" />
+              <img src="../src/assets/img/chat-white.png" alt="chat icon" />
             )}
           </div>
         </div>

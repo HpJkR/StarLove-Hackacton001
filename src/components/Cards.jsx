@@ -52,7 +52,7 @@ const Cards = (props) => {
           <div className="header-icons">
             <img
               className="settings"
-              src="./src/assets/img/settings.png"
+              src="./src/assets/img/setting.png"
               alt="settings"
             />
             <img
