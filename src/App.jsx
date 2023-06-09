@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "./components/Cards";
+import Favorite from "./components/Favorite";
 
 const App = () => {
   const [peoples, setPeoples] = useState([]);
@@ -32,7 +33,11 @@ const App = () => {
         handlePrevious={handlePrevious}
         handleNext={handleNext}
       />
-    </>
+
+      <Favorite 
+       peoples={peoples} />
+  
+    </> 
   );
 };
 

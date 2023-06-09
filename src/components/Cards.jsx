@@ -1,14 +1,28 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 const Cards = (props) => {
 
   const { peoples, handlePrevious, handleNext } = props;
 
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(
+    () => JSON.parse(localStorage.getItem("favorites")) || []
+  );
+
+  const isCardFavorite = isFavorite.includes(peoples?.name);
 
   const handleClickFavorite = () => {
-      setIsFavorite(!isFavorite);
+    setIsFavorite((prevFavorites) => {
+      const updatedFavorites = prevFavorites.includes(peoples?.name)
+        ? prevFavorites.filter((name) => name !== peoples?.name)
+        : [...prevFavorites, peoples?.name];
+
+      return updatedFavorites;
+    });
   };
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(isFavorite));
+  }, [isFavorite]);
 
   return (
     <div className="global-container">
@@ -35,10 +49,9 @@ const Cards = (props) => {
           </div>
 
           <section className="footer-icons">
-            <img className="left-arrow" src="./src/assets/img/left-arrow-solid-24.png" alt="left-arrow" onClick={handlePrevious}/>
-            {/* <img className="heart" src="./src/assets/img/redHeart.png" alt="heart" /> */}
-            <div className={isFavorite === true ? 'isFavorite' : 'notFavorite'} onClick={handleClickFavorite}></div>
-            <img className="right-arrow" src="./src/assets/img/right-arrow.png" alt="right-arrow" onClick={handleNext}/>
+            <img className="left-arrow" src="./src/assets/img/left-arrow.png" alt="left-arrow" onClick={handlePrevious}/>
+            <div className={isCardFavorite ? "isFavorite" : "notFavorite"} onClick={handleClickFavorite}></div>
+           <img className="right-arrow" src="./src/assets/img/right-arrow.png" alt="right-arrow" onClick={handleNext} /> 
        </section>
         </div>
       </div>
