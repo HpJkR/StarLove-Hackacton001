@@ -54,8 +54,10 @@ object-fit: cover;
     border-radius: 25px;
     height: 80px;
     padding: 20px 0 0 0;
-    border: solid 3px rgb(255, 196, 0);
-    box-shadow: 5px 5px 5px rgb(255, 196, 0);
+    // border: solid 3px rgb(255, 196, 0);
+    // box-shadow: 5px 5px 5px rgb(255, 196, 0);
+    border: solid 3px #ffd900;
+    box-shadow: 5px 5px 5px rgb(255, 217, 0);
 }
 
 .header-icons {
@@ -69,15 +71,24 @@ object-fit: cover;
     }
 
     .Chat {
-
+        
         height: 30px;
     }
 }
 
 
-.iphone {  
+.iphoneRight {  
     height: 700px;
     width: 347px;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
+    border-radius: 58px;
+    
+}
+.iphoneLeft {
+    height: 700px;
+    width: 347px;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,207,0,1) 0%, rgba(0,226,255,1) 100%);
+    border-radius: 58px;
 }
 
 .img-container {
@@ -122,3 +133,15 @@ object-fit: cover;
  
 }
 
+.toggleSelect {
+    z-index: 60;
+    display: flex;
+    position: absolute
+}
+
+.Filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
