@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import './App.scss'
 
 import Cards from "./components/Cards";
-
-import Chat from "./components/Chat"
+import HomePage from "./components/HomePage.jsx";
 
 
 
@@ -37,6 +36,8 @@ import Chat from "./components/Chat"
 
   return (
     <>
+
+<HomePage />
       <Cards
         characters={characters}
         setFilteredCharacters={setFilteredCharacters}
